@@ -4,22 +4,23 @@
 
 /**
  * create_array - Entry point
- 
+ *@size: size of the array
+ *@c: character
  * Return: a pointer to the array, or NULL if it fails
  */
-char *create_array(unsigned int s, char c)
+char *create_array(unsigned int size, char c)
 {
 	char *array = NULL;
 	unsigned int i;
 
-	if (s == 0)
+	if (size == 0)
 		return (NULL);
-	if (s != 0)
+	if (size != 0)
 	{
-		array = (char *)malloc(s * sizeof(char));
+		array = (char *)malloc(size * sizeof(char));
 		if (array != NULL)
 		{
-			for (i = 0; i < s; i++)
+			for (i = 0; i < size; i++)
 				array[i] = c;
 		}
 	}
